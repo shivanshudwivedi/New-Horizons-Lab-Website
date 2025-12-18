@@ -29,7 +29,7 @@ const teamData: TeamMember[] = [
   {
     id: "eyal",
     name: "Eyal Schwartz",
-    role: "Assistant Professor of Physics",
+    role: "Research Advisor & Assistant Professor of Physics",
     title: "Assistant Professor of Physics",
     type: "professor",
     image: "/team/eyal-schwartz.jpeg",
@@ -98,6 +98,31 @@ const teamData: TeamMember[] = [
     image: "/team/kaia.jpg" 
   },
   {
+    id: "ryan",
+    name: "Ryan M. Miller",
+    role: "Research Assistant",
+    type: "student",
+    image: "/new_horizons_lab.png",
+    project: "Student Researcher",
+    major: "Student Researcher",
+    graduationYear: "",
+    quote: ""
+  },
+  {
+    id: "daniel",
+    name: "Daniel Arango",
+    role: "Research Assistant",
+    type: "student",
+    image: "/new_horizons_lab.png",
+    project: "Student Researcher",
+    major: "Student Researcher",
+    graduationYear: "",
+    quote: ""
+  }
+];
+
+/**
+ * {
     id:"Jason",
     name: "Jason Perez Mendez",
     role: "Research Assistant",
@@ -123,29 +148,7 @@ const teamData: TeamMember[] = [
     linkedin: "https://www.linkedin.com/in/pema-wangchuk-5a423b279/",
     image: "/team/pema.jpeg"
   },
-  {
-    id: "ryan",
-    name: "Ryan M. Miller",
-    role: "Student Researcher",
-    type: "student",
-    image: "/new_horizons_lab.png",
-    project: "Student Researcher",
-    major: "Student Researcher",
-    graduationYear: "",
-    quote: ""
-  },
-  {
-    id: "daniel",
-    name: "Daniel Arango",
-    role: "Student Researcher",
-    type: "student",
-    image: "/new_horizons_lab.png",
-    project: "Student Researcher",
-    major: "Student Researcher",
-    graduationYear: "",
-    quote: ""
-  }
-];
+ */
 
 const scatteredPositions = [
     { top: "10%", left: "10%" },
