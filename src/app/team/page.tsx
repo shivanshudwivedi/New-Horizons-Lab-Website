@@ -182,7 +182,7 @@ export default function TeamPage() {
                 <p className="text-lg md:text-xl text-cyan-200/80 font-light tracking-wide">Connected by curiosity (Click to explore)</p>
             </motion.div>
 
-            <div className="relative flex-grow w-full h-[600px] md:h-[800px]">
+            <div className={`relative flex-grow w-full ${isMobile ? 'h-auto grid grid-cols-2 gap-y-16 gap-x-6 pt-12 pb-20' : 'h-[600px] md:h-[800px]'}`}>
                 {/* Team Members Floating */}
                 {teamData.map((member, index) => {
                     const pos = scatteredPositions[index % scatteredPositions.length];
@@ -190,15 +190,15 @@ export default function TeamPage() {
                     return (
                         <div
                             key={member.id}
-                            className="absolute cursor-pointer group"
-                            style={{ 
-                                top: isMobile ? `${(index * 13) + 10}%` : pos.top, 
-                                left: isMobile ? `${(index % 2 === 0 ? 15 : 65)}%` : pos.left,
+                            className={`${isMobile ? 'relative flex flex-col items-center justify-center' : 'absolute'} cursor-pointer group`}
+                            style={isMobile ? { zIndex: 10 } : { 
+                                top: pos.top, 
+                                left: pos.left,
                                 zIndex: 10
                             }}
                             onClick={() => setSelectedMember(member)}
                         >
-                            <div className="relative w-20 h-20 md:w-32 md:h-32 transition-transform duration-300 hover:scale-105">
+                            <div className="relative w-20 h-20 md:w-32 md:h-32 transition-transform duration-300 hover:scale-105 mb-3 md:mb-0">
                                  <div className={`absolute inset-0 rounded-full border-2 ${member.type === 'professor' ? 'border-cyan-400 shadow-[0_0_15px_rgba(34,211,238,0.5)]' : 'border-cyan-400 shadow-[0_0_15px_rgba(34,211,238,0.5)]'} group-hover:border-white group-hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] transition-all duration-300`} />
                                  <div className="absolute inset-1.5 rounded-full overflow-hidden bg-black">
                                     <Image
@@ -208,11 +208,19 @@ export default function TeamPage() {
                                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                                     />
                                  </div>
-                                 {/* Name Tooltip */}
+                                 {/* Name Tooltip (Desktop) */}
                                  <div className="hidden md:block absolute -bottom-10 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black/90 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 pointer-events-none shadow-xl z-50">
                                     <span className="text-sm text-white font-medium tracking-wide">{member.name}</span>
                                  </div>
                             </div>
+                            
+                            {/* Mobile Name Label */}
+                            {isMobile && (
+                                <div className="text-center">
+                                    <p className="text-white font-medium text-sm leading-tight">{member.name}</p>
+                                    <p className="text-cyan-400/80 text-xs mt-1">{member.role}</p>
+                                </div>
+                            )}
                         </div>
                     );
                 })}
