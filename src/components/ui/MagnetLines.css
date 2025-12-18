@@ -1,0 +1,18 @@
+.magnetLines-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.magnetLines-container span {
+  display: block;
+  border-radius: 50%;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
