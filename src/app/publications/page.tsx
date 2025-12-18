@@ -5,6 +5,13 @@ import { FileText, Calendar, Users, ExternalLink } from "lucide-react";
 
 const publications = [
   {
+  title: "Microseismic Noise Mitigation with Machine Learning for Advanced LIGO",
+  authors: "Christina Reissel, Devin Lai, Shivanshu Dwivedi, Edgard Bonilla, Claudia Geer, Christopher Wipf, Richard Mittleman, Philip Harris, Eyal Schwartz, Dovi Poznanski, Brian Lantz, Erik Katsavounidis",
+  journal: "arXiv preprint arXiv:2511.19682",
+  year: "2025",
+  link: "https://arxiv.org/abs/2511.19682"
+  },
+  {
     title: "GW231123: A Binary Black Hole Merger with Total Mass 190–265 M",
     authors: "A. G. Abac et al. (LIGO Scientific Collaboration, Virgo Collaboration & KAGRA collaboration)",
     journal: "The Astrophysical Journal Letters, 993, L25",
