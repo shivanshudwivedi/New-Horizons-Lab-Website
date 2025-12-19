@@ -19,9 +19,9 @@ export default function Home() {
           <Image 
             src="/NHLBANNER.png" 
             alt="New Horizons Lab Logo" 
-            width={250} 
-            height={250} 
-            className="mx-auto mb-2 rounded-full w-40 h-40 md:w-64 md:h-64 object-cover" 
+            width={275} 
+            height={275} 
+            className="mx-auto mb-2 object-cover" 
           />
           
           <h1 className="text-4xl md:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-slate-200 via-cyan-100 to-blue-500 group-hover:from-white group-hover:to-cyan-300 transition-all tracking-wide">
