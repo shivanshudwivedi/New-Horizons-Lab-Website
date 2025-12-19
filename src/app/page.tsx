@@ -17,7 +17,7 @@ export default function Home() {
         >
           
           <Image 
-            src="/NHL_logo.png" 
+            src="/NHLBANNER.png" 
             alt="New Horizons Lab Logo" 
             width={250} 
             height={250} 

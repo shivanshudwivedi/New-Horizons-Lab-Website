@@ -27,7 +27,7 @@ export function Navbar() {
             <Link href="/" className="flex items-center space-x-3 md:space-x-4 group">
             <div className="relative w-12 h-12 md:w-20 md:h-20">
               <Image 
-                src="/new_horizons_lab.png" 
+                src="/NHLBANNER.png" 
                 alt="New Horizons Lab" 
                 fill
                 className="rounded-full object-cover" 
