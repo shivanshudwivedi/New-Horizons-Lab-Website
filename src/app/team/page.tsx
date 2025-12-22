@@ -28,13 +28,13 @@ interface TeamMember {
 const teamData: TeamMember[] = [
   {
     id: "eyal",
-    name: "Eyal Schwartz",
+    name: "Dr. Eyal Schwartz",
     role: "Research Advisor & Assistant Professor of Physics",
     title: "Assistant Professor of Physics",
     type: "professor",
     image: "/team/eyal-schwartz.jpeg",
     email: "eyal.schwartz@trincoll.edu",
-    linkedin: "https://www.linkedin.com/in/eyal-schwartz/",
+    linkedin: "https://www.linkedin.com/in/eyal-schwartz-4097912b8/",
     education: ["Ph.D., Technion-Israel Inst. of Tech.", "M.Sc., Technion-Israel Inst. of Tech.", "B.A., Technion-Israel Inst. of Tech."],
     interests: ["Gravitational Waves", "Advanced LIGO", "Quantum Optics", "Ultra-cold Atoms"],
     awards: [
@@ -53,7 +53,7 @@ const teamData: TeamMember[] = [
     graduationYear: "2026",
     major: "Physics",
     project: "LIGO Collaboration DARM Optimization",
-    quote: "I'm currently working to mitigate the effects of seismic and microseismic activity in the PRCL, SRCL and DARM Optical Cavities. My interests lie in using computer science and physics to build and improve detectors. I've been wokring in this group since Summer 2025.",
+    quote: "I'm currently working to mitigate the PRCL, SRCL and DARM Optical Cavities in seismic frequencies. My interests lie in using computer science and physics to build and improve detectors. I've been wokring in this group since Summer 2025.",
     email: "claudia.geer@trincoll.edu",
     linkedin: "https://www.linkedin.com/in/claudia-geer",
     image: "/team/claudia.jpg" 
@@ -102,7 +102,7 @@ const teamData: TeamMember[] = [
     name: "Ryan M. Miller",
     role: "Research Assistant",
     type: "student",
-    image: "/new_horizons_lab.png",
+    image: "/team/ryan.jpg",
     project: "Student Researcher",
     major: "Student Researcher",
     graduationYear: "",
@@ -113,7 +113,7 @@ const teamData: TeamMember[] = [
     name: "Daniel Arango",
     role: "Research Assistant",
     type: "student",
-    image: "/new_horizons_lab.png",
+    image: "/team/daniel.jpg",
     project: "Student Researcher",
     major: "Student Researcher",
     graduationYear: "",

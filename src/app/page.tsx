@@ -17,10 +17,10 @@ export default function Home() {
         >
           
           <Image 
-            src="/NHLBANNER.png" 
+            src="/nhl_cropped.png" 
             alt="New Horizons Lab Logo" 
-            width={275} 
-            height={275} 
+            width={250} 
+            height={250} 
             className="mx-auto mb-2 object-cover" 
           />
           
