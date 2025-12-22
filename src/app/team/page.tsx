@@ -38,12 +38,10 @@ const teamData: TeamMember[] = [
     education: ["Ph.D., Technion-Israel Inst. of Tech.", "M.Sc., Technion-Israel Inst. of Tech.", "B.A., Technion-Israel Inst. of Tech."],
     interests: ["Gravitational Waves", "Advanced LIGO", "Quantum Optics", "Ultra-cold Atoms"],
     awards: [
-        "Laser Interferometer Gravitational Waves Observatory Council member, 2024-present.",
-        "Quantum World - Innovation for All project grant, Cardiff University, UK, 2022.",
-        "University of Otago – Division of Science Strategic Seeding Grant, 2018.",
+        "LIGO Collaboration Council Member, 2024-present.",
     ],
     teaching: "Eyal is passionate about teaching and assisting students to appreciate the beauty of nature.",
-    bio: "Eyal Schwartz's research interests span from cosmic events to microscopic quantum physics phenomena. He uses precision measurement techniques, such as optical interferometry, to explore different peculiar behaviors in nature."
+    bio: "My research interests span from cosmic events to microscopic quantum physics phenomena. I utilize precision measurement techniques, such as optical interferometry, to explore different peculiar behaviors in nature."
   },
   { 
     id: "claudia", 
@@ -52,7 +50,7 @@ const teamData: TeamMember[] = [
     type: "student",
     graduationYear: "2026",
     major: "Physics",
-    project: "LIGO Collaboration DARM Optimization",
+    project: "LIGO Detectors Optical Cavities Optimization",
     quote: "I'm currently working to mitigate the PRCL, SRCL and DARM Optical Cavities in seismic frequencies. My interests lie in using computer science and physics to build and improve detectors. I've been wokring in this group since Summer 2025.",
     email: "claudia.geer@trincoll.edu",
     linkedin: "https://www.linkedin.com/in/claudia-geer",
@@ -65,7 +63,7 @@ const teamData: TeamMember[] = [
     graduationYear: "2026",
     type: "student",
     major: "Physics & Computer Science",
-    project: "LIGO Collaboration Seismic Noise Mitigation",
+    project: "Mitigating Seismic Noise for Advanced LIGO Detectors",
     quote: "I have been working on this project from the Spring of 2025. \n I contribute by applying Machine Learning techniques to the problem of seismic noise mitigation for Advanced LIGO detectors. \n I love the project because it combines my interests in physics and computer science, and I am excited to see the results of our work.",
     email: "shivanshu.dwivedi@trincoll.edu",
     linkedin: "https://www.linkedin.com/in/shivanshudwivedi/",
@@ -78,7 +76,7 @@ const teamData: TeamMember[] = [
     graduationYear: "2028",
     type: "student",
     major: "Physics & Mathematics",
-    project: "LIGO Collaboration DARM Optimization",
+    project: "LIGO Detectors Optical Cavities Optimization",
     quote: "I started working on this project in 2025. I am focusing on the relation between the seismic ground motion and PRC (Power Recycling Cavity) signals. Working on this project has really shown me how much I enjoy the combination of physics, mathematical modeling, and data analysis. I am also getting increasingly interested in the field of machine learning tools to understand complex patterns in the detector's behavior.",
     email: "meric.yasar@trincoll.edu",
     linkedin: "https://www.linkedin.com/in/meric-yasar-1234567890/",
@@ -91,7 +89,7 @@ const teamData: TeamMember[] = [
     type: "student",
     major: "Physics", 
     graduationYear: "2026",
-    project: "LIGO Collaboration DARM Optimization",
+    project: "LIGO Detectors Optical Cavities Optimization",
     quote: "I started working on this project in the Fall of 2025. I contribute by analyzing data from the Signal Recycling Cavity (SRC) in the LIGO Detector to better understand how it shapes the detector's sensitivity. I enjoy this work because it connects my interests in physics and data analysis, and I'm excited to help improve the performance of gravitational wave detectors.",
     email: "kaia.henderson@trincoll.edu",
     linkedin: "https://www.linkedin.com/in/kaia-henderson-1234567890/",
@@ -103,10 +101,10 @@ const teamData: TeamMember[] = [
     role: "Research Assistant",
     type: "student",
     image: "/team/ryan.jpg",
-    project: "Student Researcher",
-    major: "Student Researcher",
+    project: "Fabry-Perot Cavity Optimization",
+    major: "Physics",
     graduationYear: "",
-    quote: ""
+    quote: "I am working on constructing and optimizing a Fabry-Perot cavity as a part of a larger experiment to explore a power recycled common path interferometer as future GW detector."
   },
   {
     id: "daniel",
@@ -114,10 +112,10 @@ const teamData: TeamMember[] = [
     role: "Research Assistant",
     type: "student",
     image: "/team/daniel.jpg",
-    project: "Student Researcher",
-    major: "Student Researcher",
+    project: "Fabry-Perot Cavity Optimization",
+    major: "Physics",
     graduationYear: "",
-    quote: ""
+    quote: "I am working on constructing and optimizing a Fabry-Perot cavity as a part of a larger experiment to explore a power recycled common path interferometer as future GW detector."
   }
 ];
 
@@ -306,7 +304,7 @@ export default function TeamPage() {
                                                 )}
                                                 {selectedMember.awards && (
                                                     <div>
-                                                        <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-2">Awards</h3>
+                                                        <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-2">Membeership</h3>
                                                         <ul className="list-disc list-inside text-sm text-gray-400 space-y-1">
                                                             {selectedMember.awards.slice(0, 3).map((a, i) => (
                                                                 <li key={i}>{a}</li>

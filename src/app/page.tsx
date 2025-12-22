@@ -29,7 +29,9 @@ export default function Home() {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            <span className="font-bold">LIGO Scientific Collaboration at Trinity College</span>
+            <span className="font-bold">LIGO Scientific Collaboration</span>
+            <br />
+            <span className="font-bold">Physics / Trinity College Research Group </span>
             <br /> 
             <br />
             Uncovering the mysteries of the cosmos through Gravitational Waves, Quantum Optics, and Precision Measurement.

@@ -16,6 +16,7 @@ export function Footer() {
               <li>Trinity College</li>
               <li>Hartford, CT</li>
               <li>(860) 297-5316</li>
+              <li><a href="mailto:eyal.schwartz@trincoll.edu">eyal.schwartz@trincoll.edu</a></li>
             </ul>
           </div>
           <div>

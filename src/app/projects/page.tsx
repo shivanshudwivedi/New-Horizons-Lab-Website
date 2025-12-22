@@ -60,7 +60,7 @@ const projects = [
           </div>,
     title: "Optimal Control of Optical Cavities for Advanced LIGO Detectors",
     shortDesc: "Optimizing the PRCL, SRCL and DARM Optical Cavities for Advanced LIGO Detectors",
-    fullDesc: "Optimizing the Differential Arm Length (DARM) control loop is crucial for maintaining the interferometer's lock and sensitivity. This research investigates optimal control strategies to minimize residual DARM motion, thereby reducing noise and improving the detector's duty cycle.\n\nBy employing advanced control techniques, we aim to suppress disturbances that affect the differential arm length, ensuring that the gravitational wave signal is not masked by noise. This involves a detailed analysis of the control loop dynamics and the implementation of robust control algorithms.",
+    fullDesc: "This work focuses on optimizing the four main LIGO longitudinal degrees of freedom in the seismic frequency band: Differential Arm Length (DARM), Power Recycling Cavity Length (PRCL), Signal Recycling Cavity Length (SRCL), and the Corner Michelson (MICH).\n\nPlatform Capacitive Position Sensors (CPS) are used to track the low-frequency behavior of the optical cavities below 0.4 Hz, and control optimization techniques are applied to reduce residual motion down to the sensor noise level.\n\nBy improving sub-Hz control of these degrees of freedom, this research aims to mitigate seismic disturbances that limit interferometer stability and performance. The work involves characterizing low-frequency cavity motion and implementing optimized control strategies to achieve effective motion suppression.",
     team: ["Claudia Geer", "Meric Yasar", "Kaia Henderson", "Eyal Schwartz"]
   },
   {
@@ -78,7 +78,7 @@ const projects = [
           </div>,
     title: "Thermodynamics of Memory: Entropy Analysis in Spiking Neural Networks",
     shortDesc: "Investigating the thermodynamics of memory by modeling the synapse as a fundamental unit of information storage.",
-    fullDesc: "This project investigates the thermodynamics of memory in neural systems by modeling the synapse as a fundamental unit of information storage. We conducted both a literature review and computational simulations to explore how synaptic strength modifications affect entropy in spiking neural networks.\n\nUsing the NEST simulator, we implemented a 20×20 grid of adaptive exponential integrate-and-fire neurons connected with Tsodyks–Markram synapses, totaling over 11,000 connections with distance-dependent probabilities. Background Poisson input and targeted currents were applied to drive spiking activity, which was analyzed using a lattice field theory–based Gibbs–Shannon entropy framework.\n\nPreliminary results demonstrate measurable entropy shifts when subsets of synapses are selectively strengthened, though no consistent monotonic trend emerged. These findings suggest synaptic changes influence network informational capacity, but refinement of input dynamics, clustering, and inhibitory–excitatory balance is needed to clarify whether single synapses can be considered thermodynamic units of memory.",
+    fullDesc: "This project combines synapse and neuron modeling with entropy-based analysis to identify the smallest functional unit of information storage in the brain—analogous to a bit in computer memory. We used a literature review and computational simulations to test whether an individual synapse can be treated as this minimal unit.\n\nUsing the NEST simulator, we built a 20×20 grid of adaptive exponential integrate-and-fire neurons connected via Tsodyks–Markram synapses, creating over 11,000 distance-dependent connections. Spiking activity was driven by background Poisson input along with targeted current injections to probe network responses.\n\nWe quantified changes in network structure and activity using a Gibbs–Shannon entropy measure within a lattice field theory–inspired framework. Preliminary results show that selectively strengthening subsets of synapses produces measurable shifts in entropy, suggesting synaptic plasticity can alter the network’s information content. However, entropy changes were not consistently monotonic across conditions. Future work will refine input dynamics, investigate synaptic clustering, and tune excitatory–inhibitory balance to determine whether a single synapse can be interpreted as a minimal thermodynamic unit of memory.",
     team: ["Kaia Henderson", "Meriç Yaşar", "Eyal Schwartz"]
   }
 ];
@@ -131,16 +131,7 @@ export default function ProjectsPage() {
                         </span>
                     )}
                  </div>
-                 {project.collaborators && (
-                     <div className="flex items-center gap-3 mt-3 opacity-70 grayscale hover:grayscale-0 transition-all">
-                         {/* Using text placeholders for logos as images are not provided, but structure is ready */}
-                         {project.collaborators.map(collab => (
-                             <div key={collab.name} className="text-[10px] font-bold text-white border border-white/20 px-1 rounded">
-                                 {collab.name}
-                             </div>
-                         ))}
-                     </div>
-                 )}
+              
               </div>
             </motion.div>
           ))}
