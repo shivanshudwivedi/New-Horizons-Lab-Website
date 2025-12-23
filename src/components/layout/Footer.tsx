@@ -13,6 +13,7 @@ export function Footer() {
             <h3 className="text-lg font-bold text-white mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-400 text-md">
               <li>McCook 215 & McCook 109</li>
+              <li>Physics Department</li>
               <li>Trinity College</li>
               <li>Hartford, CT</li>
               <li>(860) 297-5316</li>
