@@ -163,22 +163,23 @@ export default function TeamPage() {
                 <p className="text-lg md:text-xl text-cyan-200/80 font-light tracking-wide">Connected by curiosity (Click to explore)</p>
             </motion.div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full px-4">
                 {teamData.map((member) => (
                     <div
                         key={member.id}
-                        className="group relative aspect-square overflow-hidden rounded-xl bg-white/5 border border-white/10 hover:border-cyan-400/50 transition-all cursor-pointer"
+                        className="flex flex-col items-center text-center group cursor-pointer"
                         onClick={() => setSelectedMember(member)}
                     >
-                         <Image
-                             src={member.image}
-                             alt={member.name}
-                             fill
-                             className="object-cover transition-transform duration-500 group-hover:scale-110"
-                         />
-                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-100 transition-opacity duration-300" />
-                         <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                            <h3 className="text-white font-bold text-lg leading-tight mb-1">{member.name}</h3>
+                         <div className="relative w-48 h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-cyan-400/50 transition-all shadow-lg group-hover:shadow-[0_0_30px_rgba(34,211,238,0.3)] mb-4">
+                             <Image
+                                 src={member.image}
+                                 alt={member.name}
+                                 fill
+                                 className="object-cover transition-transform duration-500 group-hover:scale-110"
+                             />
+                         </div>
+                         <div className="transform transition-transform duration-300 group-hover:-translate-y-1">
+                            <h3 className="text-white font-bold text-xl mb-1">{member.name}</h3>
                             <p className="text-cyan-300 text-sm font-medium">{member.role}</p>
                          </div>
                     </div>
