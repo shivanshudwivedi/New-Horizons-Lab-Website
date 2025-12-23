@@ -20,8 +20,9 @@ interface TeamMember {
   bio?: string;
   education?: string[];
   interests?: string[];
-  awards?: string[];
+  trinityProfile?: string;
   teaching?: string;
+  awards?: string[];
   type: "professor" | "student";
 }
 
@@ -29,7 +30,7 @@ const teamData: TeamMember[] = [
   {
     id: "eyal",
     name: "Dr. Eyal Schwartz",
-    role: "Research Advisor & Assistant Professor of Physics",
+    role: "Group Leader",
     title: "Assistant Professor of Physics",
     type: "professor",
     image: "/team/eyal-schwartz.jpeg",
@@ -37,9 +38,7 @@ const teamData: TeamMember[] = [
     linkedin: "https://www.linkedin.com/in/eyal-schwartz-4097912b8/",
     education: ["Ph.D., Technion-Israel Inst. of Tech.", "M.Sc., Technion-Israel Inst. of Tech.", "B.A., Technion-Israel Inst. of Tech."],
     interests: ["Gravitational Waves", "Advanced LIGO", "Quantum Optics", "Ultra-cold Atoms"],
-    awards: [
-        "LIGO Collaboration Council Member, 2024-present.",
-    ],
+    trinityProfile: "https://internet3.trincoll.edu/facProfiles/Default.aspx?fid=1481167",
     teaching: "Eyal is passionate about teaching and assisting students to appreciate the beauty of nature.",
     bio: "My research interests span from cosmic events to microscopic quantum physics phenomena. I utilize precision measurement techniques, such as optical interferometry, to explore different peculiar behaviors in nature."
   },
@@ -88,7 +87,7 @@ const teamData: TeamMember[] = [
     role: "Research Assistant",
     type: "student",
     major: "Physics", 
-    graduationYear: "2026",
+    graduationYear: "2027",
     project: "LIGO Detectors Optical Cavities Optimization",
     quote: "I started working on this project in the Fall of 2025. I contribute by analyzing data from the Signal Recycling Cavity (SRC) in the LIGO Detector to better understand how it shapes the detector's sensitivity. I enjoy this work because it connects my interests in physics and data analysis, and I'm excited to help improve the performance of gravitational wave detectors.",
     email: "kaia.henderson@trincoll.edu",
@@ -102,8 +101,8 @@ const teamData: TeamMember[] = [
     type: "student",
     image: "/team/ryan.jpg",
     project: "Fabry-Perot Cavity Optimization",
-    major: "Physics",
-    graduationYear: "",
+    major: "Undeclared",
+    graduationYear: "2029",
     quote: "I am working on constructing and optimizing a Fabry-Perot cavity as a part of a larger experiment to explore a power recycled common path interferometer as future GW detector."
   },
   {
@@ -113,8 +112,8 @@ const teamData: TeamMember[] = [
     type: "student",
     image: "/team/daniel.jpg",
     project: "Fabry-Perot Cavity Optimization",
-    major: "Physics",
-    graduationYear: "",
+    major: "Physics & Engineering",
+    graduationYear: "2028",
     quote: "I am working on constructing and optimizing a Fabry-Perot cavity as a part of a larger experiment to explore a power recycled common path interferometer as future GW detector."
   }
 ];
@@ -148,83 +147,42 @@ const teamData: TeamMember[] = [
   },
  */
 
-const scatteredPositions = [
-    { top: "10%", left: "10%" },
-    { top: "20%", left: "80%" },
-    { top: "30%", left: "50%" },
-    { top: "40%", left: "20%" },
-    { top: "50%", left: "70%" },
-    { top: "60%", left: "30%" },
-    { top: "70%", left: "15%" },
-    { top: "80%", left: "80%" },
-    { top: "85%", left: "45%" },
-];
 
 export default function TeamPage() {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   return (
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-start overflow-hidden relative">
-        <div className="relative w-full max-w-7xl mx-auto min-h-[80vh] flex flex-col">
+    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-start relative">
+        <div className="relative w-full max-w-7xl mx-auto flex flex-col items-center">
             <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-center mb-8 md:mb-16 z-10 pointer-events-none"
+                className="text-center mb-16 z-10"
             >
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight">Our Team</h1>
                 <p className="text-lg md:text-xl text-cyan-200/80 font-light tracking-wide">Connected by curiosity (Click to explore)</p>
             </motion.div>
 
-            <div className={`relative flex-grow w-full ${isMobile ? 'h-auto grid grid-cols-2 gap-y-16 gap-x-6 pt-12 pb-20' : 'h-[600px] md:h-[800px]'}`}>
-                {/* Team Members Floating */}
-                {teamData.map((member, index) => {
-                    const pos = scatteredPositions[index % scatteredPositions.length];
-                    
-                    return (
-                        <div
-                            key={member.id}
-                            className={`${isMobile ? 'relative flex flex-col items-center justify-center' : 'absolute'} cursor-pointer group`}
-                            style={isMobile ? { zIndex: 10 } : { 
-                                top: pos.top, 
-                                left: pos.left,
-                                zIndex: 10
-                            }}
-                            onClick={() => setSelectedMember(member)}
-                        >
-                            <div className="relative w-20 h-20 md:w-32 md:h-32 transition-transform duration-300 hover:scale-105 mb-3 md:mb-0">
-                                 <div className={`absolute inset-0 rounded-full border-2 ${member.type === 'professor' ? 'border-cyan-400 shadow-[0_0_15px_rgba(34,211,238,0.5)]' : 'border-cyan-400 shadow-[0_0_15px_rgba(34,211,238,0.5)]'} group-hover:border-white group-hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] transition-all duration-300`} />
-                                 <div className="absolute inset-1.5 rounded-full overflow-hidden bg-black">
-                                    <Image
-                                        src={member.image}
-                                        alt={member.name}
-                                        fill
-                                        className="object-cover transition-transform duration-500 group-hover:scale-110"
-                                    />
-                                 </div>
-                                 {/* Name Tooltip (Desktop) */}
-                                 <div className="hidden md:block absolute -bottom-10 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black/90 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 pointer-events-none shadow-xl z-50">
-                                    <span className="text-sm text-white font-medium tracking-wide">{member.name}</span>
-                                 </div>
-                            </div>
-                            
-                            {/* Mobile Name Label */}
-                            {isMobile && (
-                                <div className="text-center">
-                                    <p className="text-white font-medium text-sm leading-tight">{member.name}</p>
-                                    <p className="text-cyan-400/80 text-xs mt-1">{member.role}</p>
-                                </div>
-                            )}
-                        </div>
-                    );
-                })}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+                {teamData.map((member) => (
+                    <div
+                        key={member.id}
+                        className="group relative aspect-square overflow-hidden rounded-xl bg-white/5 border border-white/10 hover:border-cyan-400/50 transition-all cursor-pointer"
+                        onClick={() => setSelectedMember(member)}
+                    >
+                         <Image
+                             src={member.image}
+                             alt={member.name}
+                             fill
+                             className="object-cover transition-transform duration-500 group-hover:scale-110"
+                         />
+                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-100 transition-opacity duration-300" />
+                         <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 className="text-white font-bold text-lg leading-tight mb-1">{member.name}</h3>
+                            <p className="text-cyan-300 text-sm font-medium">{member.role}</p>
+                         </div>
+                    </div>
+                ))}
             </div>
         </div>
 
@@ -302,9 +260,22 @@ export default function TeamPage() {
                                                         </div>
                                                     </div>
                                                 )}
-                                                {selectedMember.awards && (
+                                                {selectedMember.trinityProfile ? (
                                                     <div>
-                                                        <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-2">Membeership</h3>
+                                                        <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-2">Academic Profile</h3>
+                                                        <a 
+                                                            href={selectedMember.trinityProfile}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600/20 border border-blue-500/30 rounded-lg text-blue-300 hover:bg-blue-600/30 hover:text-white transition-colors text-sm font-medium"
+                                                        >
+                                                            View Trinity College Profile
+                                                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                                                        </a>
+                                                    </div>
+                                                ) : selectedMember.awards && (
+                                                    <div>
+                                                        <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-2">Awards & Honors</h3>
                                                         <ul className="list-disc list-inside text-sm text-gray-400 space-y-1">
                                                             {selectedMember.awards.slice(0, 3).map((a, i) => (
                                                                 <li key={i}>{a}</li>
