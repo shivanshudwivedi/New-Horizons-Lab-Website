@@ -58,7 +58,7 @@ const projects = [
                 />
             </div>
           </div>,
-    title: "Optimal Control of Optical Cavities for Advanced LIGO Detectors",
+    title: "LIGO Detectors Optical Cavities Optimization",
     shortDesc: "Optimizing the PRCL, SRCL and DARM Optical Cavities for Advanced LIGO Detectors",
     fullDesc: "This work focuses on optimizing the four main LIGO longitudinal degrees of freedom in the seismic frequency band: Differential Arm Length (DARM), Power Recycling Cavity Length (PRCL), Signal Recycling Cavity Length (SRCL), and the Corner Michelson (MICH).\n\nPlatform Capacitive Position Sensors (CPS) are used to track the low-frequency behavior of the optical cavities below 0.4 Hz, and control optimization techniques are applied to reduce residual motion down to the sensor noise level.\n\nBy improving sub-Hz control of these degrees of freedom, this research aims to mitigate seismic disturbances that limit interferometer stability and performance. The work involves characterizing low-frequency cavity motion and implementing optimized control strategies to achieve effective motion suppression.",
     team: ["Claudia Geer", "Meric Yasar", "Kaia Henderson", "Eyal Schwartz"]

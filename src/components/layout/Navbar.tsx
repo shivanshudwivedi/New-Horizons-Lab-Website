@@ -39,7 +39,7 @@ export function Navbar() {
             </Link>
 
               {/* Desktop Menu */}
-              <div className="hidden md:flex space-x-8">
+              <div className="hidden md:flex space-x-8 items-center">
                 {navItems.map((item) => (
                   <Link
                     key={item.name}
@@ -64,14 +64,28 @@ export function Navbar() {
                 ))}
               </div>
 
-            {/* Mobile Menu Button */}
-            <div className="md:hidden">
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 transition-colors"
-              >
-                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </button>
+            <div className="flex items-center gap-4">
+               {/* Trinity Logo */}
+               <Link href="https://trincoll.edu" target="_blank" rel="noopener noreferrer">
+                 <div className="relative w-10 h-10 md:w-14 md:h-14">
+                   <Image 
+                     src="/newlogo.png" 
+                     alt="Trinity College" 
+                     fill
+                     className="object-contain" 
+                   />
+                 </div>
+               </Link>
+
+                {/* Mobile Menu Button */}
+                <div className="md:hidden">
+                  <button
+                    onClick={() => setIsOpen(!isOpen)}
+                    className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 transition-colors"
+                  >
+                    {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                  </button>
+                </div>
             </div>
           </div>
         </div>

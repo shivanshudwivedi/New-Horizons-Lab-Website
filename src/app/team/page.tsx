@@ -170,7 +170,7 @@ export default function TeamPage() {
                         className="flex flex-col items-center text-center group cursor-pointer"
                         onClick={() => setSelectedMember(member)}
                     >
-                         <div className="relative w-48 h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-cyan-400/50 transition-all shadow-lg group-hover:shadow-[0_0_30px_rgba(34,211,238,0.3)] mb-4">
+                         <div className="relative w-48 h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden border-2 border-cyan-400/50 shadow-[0_0_30px_rgba(34,211,238,0.3)] mb-4 transition-all duration-300 group-hover:scale-105 group-hover:border-cyan-400 group-hover:shadow-[0_0_40px_rgba(34,211,238,0.5)]">
                              <Image
                                  src={member.image}
                                  alt={member.name}
