@@ -45,7 +45,7 @@ const teamData: TeamMember[] = [
   { 
     id: "claudia", 
     name: "Claudia Geer", 
-    role: "Senior",
+    role: "Senior (Class of 2026)",
     type: "student",
     graduationYear: "2026",
     major: "Physics",
@@ -58,7 +58,7 @@ const teamData: TeamMember[] = [
   { 
     id: "shivanshu", 
     name: "Shivanshu Dwivedi", 
-    role: "Senior",
+    role: "Senior (Class of 2026)",
     graduationYear: "2026",
     type: "student",
     major: "Physics & Computer Science",
@@ -71,7 +71,7 @@ const teamData: TeamMember[] = [
   { 
     id: "meric", 
     name: "Meric Yasar", 
-    role: "Sophomore",
+    role: "Sophomore (Class of 2028)",
     graduationYear: "2028",
     type: "student",
     major: "Physics & Mathematics",
@@ -84,7 +84,7 @@ const teamData: TeamMember[] = [
   { 
     id: "kaia", 
     name: "Kaia Henderson", 
-    role: "Junior",
+    role: "Junior (Class of 2027)",
     type: "student",
     major: "Physics", 
     graduationYear: "2027",
@@ -97,7 +97,7 @@ const teamData: TeamMember[] = [
   {
     id: "ryan",
     name: "Ryan M. Miller",
-    role: "Freshman",
+    role: "Freshman (Class of 2029)",
     type: "student",
     image: "/team/ryan.jpg",
     project: "Fabry-Perot Cavity Optimization",
@@ -108,7 +108,7 @@ const teamData: TeamMember[] = [
   {
     id: "daniel",
     name: "Daniel Arango",
-    role: "Sophomore ",
+    role: "Sophomore (Class of 2028)",
     type: "student",
     image: "/team/daniel.jpg",
     project: "Fabry-Perot Cavity Optimization",
