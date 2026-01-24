@@ -115,7 +115,30 @@ const teamData: TeamMember[] = [
     major: "Physics & Engineering",
     graduationYear: "2028",
     quote: "I am working on constructing and optimizing a Fabry-Perot cavity as a part of a larger experiment to explore a power recycled common path interferometer as future GW detector."
+  },
+  {
+    id: "nadia",
+    name: "Nadia Boudhaim Maguire",
+    role: "Sophomore (Class of 2028)",
+    type: "student",
+    image: "/team/nadia.jpg",
+    project: "Optimization of LIGO Squeezer Cavities",
+    major: "Computer Science",
+    graduationYear: "2028",
+    quote: "I am working on optimizing the LIGO squeezer cavities at seismic frequencies to improve the stability of the gravitational wave detectors."
+  },
+  {
+    id:"eli",
+    name: "Elisenda Ruiz-Kaiser",
+    role: "Sophomore (Class of 2028)",
+    type: "student",
+    image: "/team/eli.jpg",
+    major: "Undeclared",
+    graduationYear: "2028", 
+    project: "LISA Gravitational Wave Detectors",
+    quote: "I am working on literature review for opitimization of Laser Interferometer Space Antenna (LISA) gravitational wave detectors. It involved both programmming and design work for the stability of the laser systems.",
   }
+ 
 ];
 
 /**
